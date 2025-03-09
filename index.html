@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuad Portofolio</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+      );
+    </script>
+  </head>
+  <body>
+    <!-- Header Section-->
+    <header
+      class="navbar-fixed dark:bg-dark top-0 left-0 z-50 flex w-full items-center bg-transparent"
+    >
+      <div class="container">
+        <div class="item-center relative flex justify-between">
+          <div class="px-4">
+            <a href="#home" class="text-primary block py-6 text-lg font-bold"
+              >Mochammad Fuad Hasan</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              type="button"
+              class="absolute right-4 block lg:hidden"
+            >
+              <span
+                class="hamburger-line transtion origin-top-left duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transtion duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transtion origin-bottom-left duration-300 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="dark:bg-dark lg:dark:bg-dark absolute top-full right-4 hidden w-full max-w-[250px] rounded-lg py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded lg:bg-transparent lg:shadow-none dark:shadow-slate-500"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-white"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-white"
+                    >About Me</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-white"
+                    >Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skills"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-white"
+                    >Skill</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-white"
+                    >Contact</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" id="dark-toggle" class="hidden" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section end-->
+
+    <!-- Hero Section -->
+    <section id="home" class="dark:bg-dark pt-20">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-primary text-base font-semibold md:text-xl">
+              Hello Semua 👋, saya
+              <span
+                class="text-dark block text-4xl font-bold lg:text-5xl dark:text-teal-300"
+                >Mochammad Fuad Hasan</span
+              >
+            </h1>
+            <h2
+              class="text-secondary mb-5 text-lg font-medium lg:text-2xl dark:text-white"
+            >
+              Web Developer|
+              <span class="text-dark dark:text-primary">IoT Engineer</span>
+            </h2>
+            <p
+              class="text-secondary mb-10 leading-relaxed font-medium dark:text-white"
+            >
+              Saya adalah seorang pengembang yang memiliki minat besar dalam
+              <span class="text-primary">Internet of Things (IoT)</span> dan
+              <span class="text-dark dark:text-white">Web Development</span>.
+              Dengan pengalaman dalam membangun sistem pintar berbasis IoT serta
+              mengembangkan website yang responsif dan interaktif, saya berfokus
+              pada solusi inovatif yang menghubungkan dunia fisik dengan
+              teknologi digital.
+            </p>
+
+            <a
+              href="#"
+              class="bg-primary rounded-full px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-sky-400"
+              >Contact me</a
+            >
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:right-0 lg:mt-0">
+              <img
+                src="src/img/fotojas.png"
+                alt="Fuad"
+                class="relative z-10 mx-auto max-w-full"
+              />
+              <span
+                class="d absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125"
+              >
+                <svg
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="400"
+                  height="400"
+                >
+                  <path
+                    fill="#3674B5"
+                    d="M60.6,-46.3C74.4,-31.1,78.4,-6.1,71.9,14.1C65.5,34.3,48.4,49.7,29,58.3C9.5,67,-12.3,68.9,-30.2,61C-48.1,53,-62,35.2,-67.2,14.7C-72.4,-5.8,-68.8,-28.9,-56.2,-43.9C-43.5,-58.9,-21.8,-65.7,0.8,-66.3C23.4,-67,46.8,-61.5,60.6,-46.3Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section -->
+    <section id="about" class="dark:bg-dark pt-36 pb-32">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="text-primary mb-3 text-lg font-bold uppercase">
+              About me
+            </h4>
+            <h2
+              class="text-dark mb-3 max-w-xl text-3xl font-bold lg:text-4xl dark:text-white"
+            >
+              Get to Know More
+            </h2>
+            <p class="text-secondary max-w-xl text-base font-medium lg:text-lg">
+              Saya adalah IoT dan Web Developer dengan minat besar dalam
+              menciptakan solusi inovatif berbasis teknologi. Berpengalaman
+              dalam IoT dan pengembangan web, saya menghubungkan perangkat keras
+              dengan sistem digital untuk solusi yang efisien. Saya telah
+              mengerjakan sistem IoT untuk hidroponik, pemilah sampah otomatis,
+              serta website dengan Vue.js dan Tailwind CSS. Saat ini, saya juga
+              aktif sebagai freelancer di Bandung, membantu klien dalam
+              pembuatan prototipe berbasis Arduino dan ESP32.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3
+              class="text-dark mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl dark:text-white"
+            >
+              My Social Media
+            </h3>
+            <p class="text-secondary mb-10 text-base font-medium lg:text-lg">
+              Saya selalu antusias dalam mempelajari teknologi baru dan
+              mengembangkan keterampilan saya lebih jauh. Jika Anda memiliki
+              proyek menarik atau ingin berkolaborasi, jangan ragu untuk
+              menghubungi saya! 🚀
+            </p>
+            <div class="flex items-center dark:text-white">
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/mochfuadh/"
+                target="_blank"
+                class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-fuchsia-700 hover:bg-fuchsia-500 hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/fuad.hasan.165"
+                target="_blank"
+                class="border-secondary hover:border-primary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:bg-white hover:text-blue-700"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/Trafy18"
+                target="_blank"
+                class="border-secondary dark:hover:text-dark hover:text-dark mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-slate-700 hover:bg-slate-950 dark:hover:bg-white"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/+6281312738568"
+                target="_blank"
+                class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-slate-700 hover:bg-green-500 hover:text-white"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/fuad-hasan-884281159/"
+                target="_blank"
+                class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-lg border transition duration-300 ease-in-out hover:border-slate-700 hover:text-red-700"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>Gmail</title>
+                  <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about Section end -->
+
+    <!-- portfolio Section -->
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-36 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="text-primary mb-2 text-lg font-semibold md:text-2xl">
+              Portofolio
+            </h4>
+            <h2
+              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Project Terbaru
+            </h2>
+            <p class="text-secondary font-medium">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+              nostrum optio in beatae rerum unde.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
+        >
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md">
+              <img
+                src="src/img/perpustakaan.png"
+                alt="perpustakaan"
+                width="w-full"
+              />
+            </div>
+            <h3 class="text-dark mt-5 text-xl font-semibold dark:text-white">
+              Perpustakaan Sederhana
+            </h3>
+            <p class="text-secondary text-base font-medium">
+              BOOK-KU adalah sebuah sistem perpustakaan digital berbasis web
+              yang dirancang untuk membantu pengelolaan data perpustakaan,
+              termasuk pencatatan anggota, koleksi buku, serta administrasi
+              pengguna. Sistem ini menyediakan fitur untuk mengelola data
+              anggota, buku, admin, serta laporan aktivitas perpustakaan.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md">
+              <img src="src/img/siakad.png" alt="siakad" width="w-full" />
+            </div>
+            <h3 class="text-dark mt-5 text-xl font-semibold dark:text-white">
+              Sistem informasi Akademik
+            </h3>
+            <p class="text-secondary text-base font-medium">
+              SIAKAD adalah sistem informasi akademik berbasis web yang
+              dirancang untuk membantu mahasiswa dan pihak akademik dalam
+              mengelola data perkuliahan. Sistem ini mencakup fitur untuk
+              melihat informasi pribadi mahasiswa, mengelola Kartu Rencana Studi
+              (KRS), menampilkan jadwal perkuliahan, serta menampilkan Kartu
+              Hasil Studi (KHS).
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md">
+              <img src="src/img/cluster.png" alt="clustering" width="w-full" />
+            </div>
+            <h3 class="text-dark mt-5 text-xl font-semibold dark:text-white">
+              Clustering Web
+            </h3>
+            <p class="text-secondary text-base font-medium">
+              Proyek ini adalah sebuah sistem berbasis web yang digunakan untuk
+              melakukan clustering (pengelompokan) fasilitas kesehatan di
+              Provinsi Jawa Barat. Sistem ini menggunakan algoritma K-Means
+              Clustering untuk mengelompokkan desa/kelurahan berdasarkan jumlah
+              fasilitas kesehatan yang tersedia.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md">
+              <img
+                src="src/img/elearning.png"
+                alt="e-learning"
+                width="w-full"
+              />
+            </div>
+            <h3 class="text-dark mt-5 text-xl font-semibold dark:text-white">
+              E-Learning
+            </h3>
+            <p class="text-secondary text-base font-medium">
+              Heatify adalah platform pembelajaran berbasis web yang dirancang
+              untuk membantu siswa memahami konsep suhu dan kalor dalam fisika
+              secara interaktif. Nama Heatify berasal dari gabungan kata heat
+              (panas) dan intensify (memperdalam), yang mencerminkan tujuan
+              utama sistem ini: memberikan pemahaman mendalam mengenai materi
+              suhu dan kalor melalui metode belajar yang efektif dan
+              terstruktur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio Section end -->
+
+    <!-- Skills Section -->
+    <div id="skills" class="bg-slate-950 pt-36 pb-32 dark:bg-slate-200">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="text-primary mb-2 text-lg font-semibold md:text-2xl">
+              Skills
+            </h4>
+            <h2
+              class="dark:text-dark mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
+            >
+              Keahlian Yang Dimiliki
+            </h2>
+            <p class="text-secondary font-medium">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+              nostrum optio in beatae rerum unde.
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/CSS3_logo.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/javascript-1.svg" alt="CSS" width="80" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/PHP-logo.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/Laravel.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/Python-logo-notext.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/sql.png" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/Git_icon.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/Arduino_Logo.svg" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80px] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/tailwindcss.png" alt="CSS" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/skills/vue.png" alt="CSS" width="80" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-[80] py-4 opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img
+                src="src/skills/Node.js_logo_2015.svg"
+                alt="CSS"
+                width="80"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skills Section end -->
+
+    <!-- Blog Section -->
+    <section id="blog" class="dark:bg-dark bg-slate-100 pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="text-primary mb-2 text-lg font-semibold md:text-2xl">
+              Blog
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Tulisan Terkini
+            </h2>
+            <p class="text-secondary font-medium">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem ex deleniti dicta totam.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="shodow-lg mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-700 dark:shadow-slate-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2dyYW1taW5nfGVufDB8fDB8fHww"
+                alt="programming"
+                class="w-full"
+              />
+              <div class="px-6 py-8">
+                <a
+                  href="#"
+                  class="hover:text-primary font-semibol mb-3 block truncate text-xl dark:text-white"
+                  ><h3>Belajar Programming</h3></a
+                >
+                <p class="text-secondary mb-4 text-base font-medium">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, libero.
+                </p>
+                <a
+                  href="#"
+                  class="bg-primary rounded-lg px-4 py-2 text-sm font-medium text-white hover:opacity-50"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="shodow-lg mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-700 dark:shadow-slate-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1601352209716-978486b0da4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGJhbmR1bmd8ZW58MHx8MHx8fDA%3D"
+                alt="programming"
+                class="w-full"
+              />
+              <div class="px-6 py-8">
+                <a
+                  href="#"
+                  class="hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-white"
+                  ><h3>Rekomendasi Tempat Camping Di Bandung</h3></a
+                >
+                <p class="text-secondary mb-4 text-base font-medium">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, libero.
+                </p>
+                <a
+                  href="#"
+                  class="bg-primary rounded-lg px-4 py-2 text-sm font-medium text-white hover:opacity-50"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="shodow-lg mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-700 dark:shadow-slate-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+                alt="programming"
+                class="w-full"
+              />
+              <div class="px-6 py-8">
+                <a
+                  href="#"
+                  class="hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-white"
+                  ><h3>Chevrolet Camaro</h3></a
+                >
+                <p class="text-secondary mb-4 text-base font-medium">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, libero.
+                </p>
+                <a
+                  href="#"
+                  class="bg-primary rounded-lg px-4 py-2 text-sm font-medium text-white hover:opacity-50"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="shodow-lg mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-700 dark:shadow-slate-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFJ1bm5pbmclMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="programming"
+                class="w-full"
+              />
+              <div class="px-6 py-8">
+                <a
+                  href="#"
+                  class="hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-white"
+                  ><h3>Tips Olahraga Lari</h3></a
+                >
+                <p class="text-secondary mb-4 text-base font-medium">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, libero.
+                </p>
+                <a
+                  href="#"
+                  class="bg-primary rounded-lg px-4 py-2 text-sm font-medium text-white hover:opacity-50"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Contact Form-->
+    <section id="contact" class="dark:bg-dark pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="text-primary mb-2 text-lg font-semibold md:text-2xl">
+              Contact
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Contact Me
+            </h2>
+            <p class="text-secondary text-justify font-medium">
+              Jika Anda memiliki proyek menarik, ingin berkolaborasi, atau
+              sekadar berdiskusi seputar IoT dan Web Development, jangan ragu
+              untuk menghubungi saya!
+            </p>
+          </div>
+        </div>
+        <form>
+          <div class="w-full lg:mx-auto lg:w-2/3">
+            <div class="mb-8 w-full px-4">
+              <label
+                for="name"
+                class="text-primary text-base font-bold uppercase"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="text-dark focus:ring-primary focus:border-primary w-full rounded-md bg-slate-200 p-3 focus:ring-1 focus:outline-none"
+              />
+            </div>
+            <div class="mb-8 w-full px-4">
+              <label
+                for="email"
+                class="text-primary text-base font-bold uppercase"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="text-dark focus:ring-primary focus:border-primary w-full rounded-md bg-slate-200 p-3 focus:ring-1 focus:outline-none"
+              />
+            </div>
+            <div class="mb-8 w-full px-4">
+              <label
+                for="message"
+                class="text-primary text-base font-bold uppercase"
+                >Message</label
+              >
+              <textarea
+                type="text"
+                id="name"
+                class="text-dark focus:ring-primary focus:border-primary h-40 w-full rounded-md bg-slate-200 p-3 focus:ring-1 focus:outline-none"
+              ></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button
+                class="font semi-bold bg-primary w-full rounded-full px-8 py-3 text-base font-semibold text-white transition duration-500 hover:opacity-50 hover:shadow-lg"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Form End-->
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">
+              Mochammad Fuad Hasan
+            </h2>
+            <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
+            <p>fuadhasan26.fh@gmail.com</p>
+            <p>Bandung</p>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Category</h3>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Programing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Sport Car</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Camping</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Olahraga</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mx-auto mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary inline-block text-base text-slate-300 transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full border-t border-white pt-10 text-white">
+          <div class="mb-5 flex items-center justify-center">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/mochfuadh/"
+              target="_blank"
+              class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-fuchsia-700 hover:bg-white hover:text-fuchsia-500"
+            >
+              <svg
+                role="img"
+                width="20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/fuad.hasan.165"
+              target="_blank"
+              class="border-secondary hover:border-primary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:bg-white hover:text-blue-700"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/Trafy18"
+              target="_blank"
+              class="border-secondary hover:text-dark mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-slate-700 hover:bg-white"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/+6281312738568"
+              target="_blank"
+              class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:border-slate-700 hover:bg-green-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>WhatsApp</title>
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fuad-hasan-884281159/"
+              target="_blank"
+              class="border-secondary mr-3 flex h-9 w-9 items-center justify-center rounded-lg border transition duration-300 ease-in-out hover:border-slate-700 hover:bg-white hover:text-red-700"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>Gmail</title>
+                <path
+                  d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="text-center text-sm font-medium">
+            Made by Mochammad Fuad Hasan with Tailwindcss
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#home"
+      id="to-top"
+      class="bg-primary fixed right-4 bottom-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full p-4 hover:animate-bounce"
+    >
+      <span
+        class="bg-red mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2 text-white"
+      ></span>
+    </a>
+    <!-- Back to Top End -->
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
